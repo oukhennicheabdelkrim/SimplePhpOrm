@@ -37,7 +37,9 @@ interface ModelIntrface
     /**
      * @return mixed
      */
-    function getId():int;
+    public function getId();
+
+
 
 
 }

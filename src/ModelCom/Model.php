@@ -19,7 +19,10 @@ abstract class Model implements ModelIntrface
         }
     }
 
-    public function getId():int
+    /**
+     * @return mixed
+     */
+    public function getId()
     {
         // TODO: Implement getId() method.
         return $this->id;
