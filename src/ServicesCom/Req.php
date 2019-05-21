@@ -8,8 +8,17 @@
 
 namespace oukhennicheAbdelkrim\SimplePhpOrm\ServicesCom;
 
+/**
+ * Class Req
+ * @package oukhennicheAbdelkrim\SimplePhpOrm\ServicesCom
+ * make request to the database
+ */
 class Req
 {
+    /**
+     * @param $tableName
+     * @return mixed
+     */
     public static function get($tableName)
     {
 
