@@ -6,7 +6,7 @@
  * Time: 17:12
  */
 
-namespace App\ModelCom;
+namespace oukhennicheAbdelkrim\SimplePhpOrm\ModelCom;
 
 
 interface ModelIntrface

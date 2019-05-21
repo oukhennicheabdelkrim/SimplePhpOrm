@@ -6,7 +6,7 @@
  * Time: 17:01
  */
 
-namespace App\ModelCom;
+namespace oukhennicheAbdelkrim\SimplePhpOrm\ModelCom;
 
 
 class Collection implements \Iterator

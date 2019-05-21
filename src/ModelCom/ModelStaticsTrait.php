@@ -6,8 +6,8 @@
  * Time: 16:26
  */
 
-namespace App\ModelCom;
-use App\ServicesCom\Req;
+namespace oukhennicheAbdelkrim\SimplePhpOrm\ModelCom;
+use oukhennicheAbdelkrim\SimplePhpOrm\ServicesCom\Req;
 
 
 trait ModelStaticsTrait

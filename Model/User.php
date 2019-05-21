@@ -9,7 +9,7 @@
 namespace App\Model;
 
 
-use App\ModelCom\Model;
+use oukhennicheAbdelkrim\SimplePhpOrm\ModelCom\Model;
 
 class User extends Model
 {

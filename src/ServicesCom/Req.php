@@ -6,7 +6,7 @@
  * Time: 16:08
  */
 
-namespace App\ServicesCom;
+namespace oukhennicheAbdelkrim\SimplePhpOrm\ServicesCom;
 
 class Req
 {

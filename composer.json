@@ -1,9 +1,10 @@
 {
-    "name": "kikim/test",
+    "name": "oukhennicheAbdelkrim/SimplePhpOrm",
     "require": {},
     "autoload": {
         "psr-4": {
-            "App\\":""
+            "oukhennicheAbdelkrim\\SimplePhpOrm\\":"src",
+             "App\\":""
         }
     }
 }

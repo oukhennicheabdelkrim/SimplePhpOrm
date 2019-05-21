@@ -5,7 +5,7 @@
  * Date: 21/05/2019
  * Time: 16:00
  */
-namespace  App\ModelCom;
+namespace  oukhennicheAbdelkrim\SimplePhpOrm\ModelCom;
 
 abstract class Model implements ModelIntrface
 {
