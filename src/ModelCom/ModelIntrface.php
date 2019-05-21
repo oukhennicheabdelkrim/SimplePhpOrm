@@ -18,6 +18,12 @@ interface ModelIntrface
     static function getAll():Collection;
 
     /**
+     * @param $id
+     * @return Model or false
+     */
+    static function find($id);
+
+    /**
      * @return string
      */
     static function getTableName():string ;
@@ -37,6 +43,7 @@ interface ModelIntrface
     /**
      * @return mixed
      */
+    public function __call($methods, $arguments);
     public function getId();
 
 

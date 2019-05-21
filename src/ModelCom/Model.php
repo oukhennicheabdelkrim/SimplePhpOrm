@@ -7,25 +7,19 @@
  */
 namespace  oukhennicheAbdelkrim\SimplePhpOrm\ModelCom;
 
+/**
+ * Class Model
+ * @package oukhennicheAbdelkrim\SimplePhpOrm\ModelCom
+ */
 abstract class Model implements ModelIntrface
 {
+    protected $hasMany=[];
+    use ModelTrait;
 
-    use ModelStaticsTrait;
-    function __construct($array)
-    {
-        foreach ($array as $k=>$params)
-        {
-            $this->$k = $params;
-        }
-    }
 
-    /**
-     * @return mixed
-     */
-    public function getId()
+    function __construct(array $data)
     {
-        // TODO: Implement getId() method.
-        return $this->id;
+        $this->loadModel($data);
     }
 
 }

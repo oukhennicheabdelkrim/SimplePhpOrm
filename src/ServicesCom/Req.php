@@ -15,18 +15,53 @@ namespace oukhennicheAbdelkrim\SimplePhpOrm\ServicesCom;
  */
 class Req
 {
+    private $where = '';
+    private $executeArray = [];
+    private $tableName = '';
+
+    public function __construct($tableName)
+    {
+        $this->tableName = $tableName;
+    }
+
     /**
      * @param $tableName
      * @return mixed
      */
-    public static function get($tableName)
+    public function get()
     {
-
-            $req= Bdd::getInstance()->connection->prepare("select * from $tableName");
-            $req->execute([]);
-            return $req->fetchAll(\PDO::FETCH_ASSOC);
+        $req = Bdd::getInstance()->connection->prepare("select * from " . $this->tableName . $this->getWhereReq());
+        $req->execute([]);
+        $this->clearCache();
+        return $req->fetchAll(\PDO::FETCH_ASSOC);
     }
 
+
+    /**
+     * @param $a string|int
+     * @param $p string
+     * @param $b string|int
+     */
+    public function where($a, $p, $b)
+    {
+        $this->where .= ' '.$a . ' ' . $p . ' ' . $b.' ';
+        return $this;
+    }
+
+    /**
+     * @return string
+     */
+    private function getWhereReq()
+    {
+        if (empty($this->where)) return ''; else
+            return ' where ' . $this->where;
+    }
+
+    private function clearCache()
+    {
+        $this->where='';
+        $this->executeArray=[];
+    }
 
 
 }

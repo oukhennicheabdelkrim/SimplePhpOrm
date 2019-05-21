@@ -5,45 +5,32 @@
  * Date: 20/05/2019
  * Time: 21:24
  */
-
 include 'vendor/autoload.php';
-
 require_once ('User.php');
+require_once ('Book.php');
 
 
+$user = User::find(2); // find and get user by id
+$user->show();
 
-$users = User::getAll();
+$books = $user->books(); // get user books using hasMany attribute;
 
-foreach ($users as $user)
+if ($books->count()==0)
+    echo $user->name , ' does not have any book.';
+else
+    foreach ($books as $book)
+    {
+        echo $book->title,'<br>';
+    }
+
+// get All Users
+ $users = User::getAll();
+
+// show users
+echo '<h3>Users : </h3>';
+foreach ( $users as $user)
 {
-    echo $user->showUserName().'<br>';
+    $user->show();
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
