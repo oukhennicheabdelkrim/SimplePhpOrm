@@ -1,5 +1,5 @@
 {
-  "name": "oukhennicheAbdelkrim/SimplePhpOrm",
+  "name": "oukhenniche-abdelkrim/simple-php-orm",
   "description":"A simple ORM for php applications",
   "keywords": ["ORM","Php"],
   "version":"0.0.1",
@@ -13,8 +13,7 @@
     "require": {},
     "autoload": {
         "psr-4": {
-            "oukhennicheAbdelkrim\\SimplePhpOrm\\":"src",
-             "App\\":""
+            "oukhennicheAbdelkrim\\SimplePhpOrm\\":"src"
         }
     }
 }

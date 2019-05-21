@@ -6,8 +6,6 @@
  * Time: 16:49
  */
 
-namespace App\Model;
-
 
 use oukhennicheAbdelkrim\SimplePhpOrm\ModelCom\Model;
 

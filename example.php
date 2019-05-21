@@ -8,7 +8,8 @@
 
 include 'vendor/autoload.php';
 
-use App\Model\User;
+require_once ('User.php');
+
 
 
 $users = User::getAll();
