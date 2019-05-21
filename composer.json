@@ -1,5 +1,15 @@
 {
-    "name": "oukhennicheAbdelkrim/SimplePhpOrm",
+  "name": "oukhennicheAbdelkrim/SimplePhpOrm",
+  "description":"A simple ORM for php applications",
+  "keywords": ["ORM","Php"],
+  "version":"0.0.1",
+  "authors": [
+    {
+      "name": "OUKHENNICHE Abdelkrim",
+      "email": "oukhennicheabdelkrim@gmail.com",
+      "role": "Developer"
+    }
+  ],
     "require": {},
     "autoload": {
         "psr-4": {
