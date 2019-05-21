@@ -23,7 +23,7 @@ class Bdd
 
     /**
      * @return Bdd
-     * get A uniqueue Bdd Instance
+     * get A unique Bdd Instance
      */
     public static function getInstance()
     {
