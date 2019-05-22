@@ -13,6 +13,17 @@ namespace  oukhennicheAbdelkrim\SimplePhpOrm\ModelCom;
  */
 abstract class Model implements ModelIntrface
 {
+    /**
+     * @var array
+     * [
+     *   'dataname'=>'ModelClassName.foreignkey'
+     *                  ...
+     * ]
+     * dataname : method to get data
+     * ModelClassName : the name of class without namespaces
+     * foreignkey : foreign key
+     *
+     */
     protected $hasMany=[];
     use ModelTrait;
 

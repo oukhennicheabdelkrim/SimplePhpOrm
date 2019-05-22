@@ -6,8 +6,22 @@
  * Time: 21:24
  */
 include 'vendor/autoload.php';
-require_once ('User.php');
-require_once ('Book.php');
+
+
+use oukhennicheAbdelkrim\SimplePhpOrm\ModelCom\Model;
+
+class User extends Model{
+
+    public $hasMany = ['books' => 'Book.user_id'];
+    public function show(){
+        echo '<p>id :' .$this->id.'| name : '. ucfirst($this->name) . '</p>';
+    }
+
+}
+
+class Book extends Model{
+
+}
 
 
 $user = User::find(2); // find and get user by id
@@ -24,13 +38,12 @@ else
     }
 
 // get All Users
- $users = User::getAll();
+$users = User::getAll();
 
 // show users
+
 echo '<h3>Users : </h3>';
-foreach ( $users as $user)
-{
+foreach ($users as $user)
     $user->show();
-}
 
 
